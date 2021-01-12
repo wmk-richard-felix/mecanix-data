@@ -1,0 +1,5 @@
+{
+  "ecl.launchConfiguration": "local_thor (mecanix-data)",
+  "ecl.targetCluster": {},
+  "ecl.eclccPath": "C:\\Program Files\\HPCCSystems\\7.12.14\\clienttools\\bin\\eclcc.exe"
+}
