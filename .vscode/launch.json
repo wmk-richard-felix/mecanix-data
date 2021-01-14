@@ -5,18 +5,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "local_thor",
+      "name": "localhost-hthor-submit",
       "type": "ecl",
       "request": "launch",
+      "mode": "submit",
+      "workspace": "${workspaceRoot}",
+      "program": "${file}",
       "protocol": "http",
       "serverAddress": "192.168.56.101",
       "port": 8010,
-      "targetCluster": "thor",
       "rejectUnauthorized": false,
+      "targetCluster": "hthor",
+      "eclccPath": "${config:ecl.eclccPath}",
+      "eclccArgs": [],
+      "includeFolders": "${config:ecl.includeFolders}",
+      "legacyMode": "${config:ecl.legacyMode}",
       "resultLimit": 100,
       "timeoutSecs": 60,
       "user": "richard",
       "password": ""
-    }
+    },
   ]
 }

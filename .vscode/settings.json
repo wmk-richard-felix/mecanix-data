@@ -1,5 +1,16 @@
 {
   "ecl.launchConfiguration": "local_thor (mecanix-data)",
   "ecl.targetCluster": {},
-  "ecl.eclccPath": "C:\\Program Files\\HPCCSystems\\7.12.14\\clienttools\\bin\\eclcc.exe"
+  "ecl.eclccPath": "C:\\Program Files\\HPCCSystems\\7.8.22\\clienttools\\bin\\eclcc.exe",
+  // Run 'eclcc -syntax' on save.
+  "ecl.syntaxCheckOnSave": true,
+  // Run 'eclcc -syntax' on load.
+  "ecl.syntaxCheckOnLoad": true,
+  // Additional folders to use when resolving IMPORT statements.
+  "ecl.includeFolders": [],
+  // Add '-legacy' argument to eclcc.
+  "ecl.legacyMode": false,
+  // Automatically open Workunits on creation.
+  "ecl.WUAutoOpen": true,
+  "ecl.WUOpenExternal": true,
 }
