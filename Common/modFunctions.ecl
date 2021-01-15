@@ -17,13 +17,4 @@ EXPORT modFunctions := MODULE
     RETURN Common.modConstants.sSystemRoot + sSystem + sUdmTable + sOutputSuffix;
   END;
 
-  EXPORT fIdUnico(INTEGER uCounter) := FUNCTION
-
-    sCounter := (STRING) uCounter;
-    sCurrentDate := (STRING) STD.Date.CurrentDate();
-    sCurrentTime := (STRING) STD.Date.CurrentTime();
-
-    RETURN (UNSIGNED) (sCurrentDate[3..] + sCurrentTime[1..4] + sCounter);
-  END;
-
 END;

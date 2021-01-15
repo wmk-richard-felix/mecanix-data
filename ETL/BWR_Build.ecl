@@ -1,15 +1,10 @@
 IMPORT Common, ETL, STD;
 
-// ETL.modBuild.macBuildProblemas('problemas');
-// ETL.modBuild.macBuildProblemas('barulhos');
+SEQUENTIAL(
+  // ETL.modBuild.macBuildProblemas('problemas');
+  SEQUENTIAL(
+    Common.modIdUnico('barulhos').aCreateIDfile;
+    ETL.modBuild.macBuild('barulhos');
+  );
 
-
-// IF(NOT STD.File.FileExists(Common.modConstants.sIdUnicoFilename),
-//   OUTPUT(DATASET([{1}], {UNSIGNED id}),,Common.modConstants.sIdUnicoFilename)
-// );
-
-// dTest := DATASET(Common.modConstants.sIdUnicoFilename, {UNSIGNED id}, THOR).id;
-
-// dTest;
-
-Common.modIdUnico.aCreateIDfile;
+);

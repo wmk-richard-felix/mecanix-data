@@ -1,6 +1,8 @@
 {
   "ecl.launchConfiguration": "local_thor (mecanix-data)",
-  "ecl.targetCluster": {},
+  "ecl.targetCluster": {
+    "localhost_dell (mecanix-data)": "thor"
+  },
   "ecl.eclccPath": "C:\\Program Files\\HPCCSystems\\7.8.22\\clienttools\\bin\\eclcc.exe",
   // Run 'eclcc -syntax' on save.
   "ecl.syntaxCheckOnSave": true,
@@ -11,6 +13,6 @@
   // Add '-legacy' argument to eclcc.
   "ecl.legacyMode": false,
   // Automatically open Workunits on creation.
-  "ecl.WUAutoOpen": true,
+  // "ecl.WUAutoOpen": true,
   "ecl.WUOpenExternal": true,
 }
