@@ -3,7 +3,7 @@ EXPORT modLayouts := MODULE
   EXPORT lMeta := RECORD
     UNSIGNED id_unico;
     STRING marca;
-    STRING ano;
+    UNSIGNED4 ano;
     STRING modelo;
   END;
 

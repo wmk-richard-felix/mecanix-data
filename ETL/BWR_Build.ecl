@@ -2,5 +2,9 @@ IMPORT Common, ETL, STD;
 
 SEQUENTIAL(
   // ETL.modBuild.macBuildProblemas('problemas');
-  ETL.modBuild.macBuild('barulhos');
+  SEQUENTIAL(
+    Common.modIdUnico('barulhos').aCreateIDfile;
+    ETL.modBuild.macBuild('barulhos');
+  );
+
 );
