@@ -1,13 +1,13 @@
 EXPORT modBuild := MODULE
 
-  EXPORT macBuildProblemas(sFile = '') := FUNCTIONMACRO
+  EXPORT macBuild(sFile = '') := FUNCTIONMACRO
     IMPORT Common, MDL, STD;
 
     sFilename := #EXPAND('MDL.mod' + sFile + '.sFilename()');
     dData := #EXPAND('MDL.mod' + sFile + '.dRawData()');
     
     dDataOut := PROJECT(dData, TRANSFORM(#EXPAND('MDL.mod' + sFile + '.lLayout'),
-      SELF.id_unico := Common.modFunctions.fIdUnico(COUNTER);
+      SELF.id_unico := WHEN((UNSIGNED) (Common.modIdUnico(sFile).fReturnId + (STRING) COUNTER), Common.modIdUnico(sFile).fUpdateId);
       SELF := LEFT; 
     ));
     
