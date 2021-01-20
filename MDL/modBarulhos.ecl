@@ -24,7 +24,7 @@ EXPORT modBarulhos := MODULE
   EXPORT sRawFilename(STRING LF = '') := Common.modFunctions.fGetFilename(Common.modConstants.sRawSubSystem, 'barulhos', LF);
   EXPORT sFilename(STRING LF = '') := Common.modFunctions.fGetFilename(Common.modConstants.sMecanixSubSystem, 'barulhos', LF);
   
-  EXPORT dRawData(STRING LF = '') := DATASET(sRawFilename(LF), {lLayout AND NOT id_unico}, CSV(HEADING(1), SEPARATOR(',')));
+  EXPORT dRawData(STRING LF = '') := DATASET(sRawFilename(LF), {lLayout AND NOT id_unico}, CSV(HEADING(1), SEPARATOR(';')));
   EXPORT dData(STRING LF = '') := DATASET(sFilename(LF), lLayout, THOR);
   EXPORT dMIAData(STRING LF = '') := DATASET(sFilename(LF), lMiaLayout, THOR);
 

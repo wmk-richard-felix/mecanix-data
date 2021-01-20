@@ -13,6 +13,7 @@
   // Add '-legacy' argument to eclcc.
   "ecl.legacyMode": false,
   // Automatically open Workunits on creation.
-  // "ecl.WUAutoOpen": true,
+  "ecl.WUAutoOpen": true,
   "ecl.WUOpenExternal": true,
+  "python.pythonPath": "C:\\Users\\feliri01\\Miniconda2\\python.exe",
 }

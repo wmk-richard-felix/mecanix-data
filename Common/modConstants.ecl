@@ -4,5 +4,5 @@ EXPORT modConstants := MODULE
   EXPORT sMecanixSubSystem := 'mecanix';
   EXPORT sRawSubSystem := 'rawfiles::mecanix';
   EXPORT sIdUnicoFilename := '~mecanix::id::'; 
-
+  
 END;

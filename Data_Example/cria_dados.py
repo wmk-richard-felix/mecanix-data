@@ -1,7 +1,7 @@
 import csv
 import random
 
-numero_registros = 5000
+numero_registros = 1000
 arquivoOutput = 'arquivo-gerado.csv'
 cabecalho = ['marca', 'ano', 'modelo',
              'barulho_estranho', 'carro_ligado_parado', 'barulho_durante_partida', 'barulho_girando_volante', 'barulho_engate_marcha', 'barulho_ligado_movimento', 'barulho_pisa_freio',
