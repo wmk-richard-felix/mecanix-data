@@ -1,4 +1,4 @@
-IMPORT Common, ETL, STD;
+IMPORT Common, ETL, MDL, STD;
 
 SEQUENTIAL(
   SEQUENTIAL(
@@ -7,6 +7,9 @@ SEQUENTIAL(
 
     Common.modIdUnico('barulhos').aCreateIDfile;
     ETL.modBuild.macBuild('barulhos');
+    
+    // Create the indexes
+    MDL.modCreateIndexes.aCreateIndexes(TRUE);
   );
 
 );

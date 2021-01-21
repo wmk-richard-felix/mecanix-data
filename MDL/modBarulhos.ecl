@@ -19,13 +19,17 @@ EXPORT modBarulhos := MODULE
     UNSIGNED1 motor_girando_normal;
     UNSIGNED1 problema;
   END;
-  EXPORT lMiaLayout := {lLayout AND NOT [marca, ano, modelo]};
+
+  EXPORT lLayoutKey := {lLayout AND NOT [marca, ano, modelo]};
 
   EXPORT sRawFilename(STRING LF = '') := Common.modFunctions.fGetFilename(Common.modConstants.sRawSubSystem, 'barulhos', LF);
   EXPORT sFilename(STRING LF = '') := Common.modFunctions.fGetFilename(Common.modConstants.sMecanixSubSystem, 'barulhos', LF);
   
-  EXPORT dRawData(STRING LF = '') := DATASET(sRawFilename(LF), {lLayout AND NOT id_unico}, CSV(HEADING(1), SEPARATOR(';')));
+  EXPORT dRawData(STRING LF = '') := DATASET(sRawFilename(LF), {lLayout AND NOT rid}, CSV(HEADING(1), SEPARATOR(';')));
   EXPORT dData(STRING LF = '') := DATASET(sFilename(LF), lLayout, THOR);
-  EXPORT dMIAData(STRING LF = '') := DATASET(sFilename(LF), lMiaLayout, THOR);
+  EXPORT dMIAData(STRING LF = '') := DATASET(sFilename(LF), lLayoutKey, THOR);
+
+  // Keys
+  MDL.macCreateIndex(dMIAData(), 'lLayoutKey', 'rid', 'barulhos', '', '');
 
 END;

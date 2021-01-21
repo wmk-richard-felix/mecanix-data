@@ -1,4 +1,4 @@
-IMPORT LearningTrees, MDL, ML_Core, MLT;
+IMPORT LearningTrees, MDL, ML_Core, MecanixLT;
 
 OUTPUT(MecanixLT.modConvertData.dMyIndTrainDataNF, NAMED('dMyIndTrainDataNF'));
 OUTPUT(MecanixLT.modConvertData.dMyDepTrainDataNF, NAMED('dMyDepTrainDataNF'));

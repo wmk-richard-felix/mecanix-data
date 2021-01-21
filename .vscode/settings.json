@@ -1,5 +1,5 @@
 {
-  "ecl.launchConfiguration": "local_thor (mecanix-data)",
+  "ecl.launchConfiguration": "play.hpccsystems.com (mecanix-data)",
   "ecl.targetCluster": {
     "localhost_dell (mecanix-data)": "thor"
   },

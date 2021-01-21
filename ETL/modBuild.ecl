@@ -7,7 +7,7 @@ EXPORT modBuild := MODULE
     dData := #EXPAND('MDL.mod' + sFile + '.dRawData()');
     
     dDataOut := PROJECT(dData, TRANSFORM(#EXPAND('MDL.mod' + sFile + '.lLayout'),
-      SELF.id_unico := WHEN((UNSIGNED) (Common.modIdUnico(sFile).fReturnId + (STRING) COUNTER), Common.modIdUnico(sFile).fUpdateId);
+      SELF.rid := WHEN((UNSIGNED) (Common.modIdUnico(sFile).fReturnId + (STRING) COUNTER), Common.modIdUnico(sFile).fUpdateId);
       SELF := LEFT; 
     ));
     

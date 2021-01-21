@@ -17,4 +17,9 @@ EXPORT modFunctions := MODULE
     RETURN Common.modConstants.sSystemRoot + sSystem + sUdmTable + sOutputSuffix;
   END;
 
+  // Returns an UNSIGNED8 that represents the current datetime in the format YYYYMMDDHHMMSS
+  EXPORT UNSIGNED8 fCurrentDateTime() := FUNCTION
+    RETURN (UNSIGNED8) (STD.Date.CurrentDate()*1000000 + STD.Date.CurrentTime());
+  END;
+
 END;
