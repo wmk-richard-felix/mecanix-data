@@ -21,7 +21,7 @@ EXPORT modPrepareData := MODULE
 
   // Now cut the deck and you have random samples within each set
   // While you're at it, project back to your original format -- we dont need the rnd field anymore
-  EXPORT dMyTrainData := PROJECT(dMyDataES[1..750], lMyFormat);//:PERSIST('~mecanix::barulhos::Train');
-  EXPORT dMyTestData := PROJECT(dMyDataES[751..1000], lMyFormat);//:PERSIST('~mecanix::barulhos::Test');
+  EXPORT dMyTrainData := PROJECT(dMyDataES[1..450], lMyFormat);//:PERSIST('~mecanix::barulhos::Train');
+  EXPORT dMyTestData := PROJECT(dMyDataES[451..650], lMyFormat);//:PERSIST('~mecanix::barulhos::Test');
 
 END;

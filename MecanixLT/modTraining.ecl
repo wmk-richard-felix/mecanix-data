@@ -12,7 +12,7 @@ dMyDepTestDataDF  := Discretize.ByRounding(dMyDepTestData);
 
 EXPORT modTraining := MODULE
 
-  EXPORT myLearnerC := LT.ClassificationForest();
+  EXPORT myLearnerC := LT.ClassificationForest(10,,10);
   EXPORT dMyModelC := myLearnerC.GetModel(dMyIndTrainData, dMyDepTrainDataDF); 
   // Notice second param uses the DiscreteField dataset
   EXPORT predictedClasses := myLearnerC.Classify(dMyModelC, dMyIndTestData);
