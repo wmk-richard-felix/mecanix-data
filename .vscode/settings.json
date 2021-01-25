@@ -1,7 +1,8 @@
 {
   "ecl.launchConfiguration": "play.hpccsystems.com (mecanix-data)",
   "ecl.targetCluster": {
-    "localhost_dell (mecanix-data)": "thor"
+    "localhost_dell (mecanix-data)": "thor",
+    "play.hpccsystems.com (mecanix-data)": "roxie"
   },
   "ecl.eclccPath": "C:\\Program Files\\HPCCSystems\\7.8.22\\clienttools\\bin\\eclcc.exe",
   // Run 'eclcc -syntax' on save.

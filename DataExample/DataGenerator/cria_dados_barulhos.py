@@ -2,7 +2,7 @@ import csv
 import random
 
 numero_registros = 1000
-arquivoOutput = 'arquivo-gerado.csv'
+arquivoOutput = '../arquivo-gerado-barulhos.csv'
 cabecalho = ['marca', 'ano', 'modelo',
              'barulho_estranho', 'carro_ligado_parado', 'barulho_durante_partida', 'barulho_girando_volante', 'barulho_engate_marcha', 'barulho_ligado_movimento', 'barulho_pisa_freio',
              'barulho_rodas', 'barulho_rodas_constantes', 'barulho_rodas_intermitente', 'barulho_lombadas', 'carro_sem_forca', 'barulho_aceleracao', 'motor_girando_lentamente', 'motor_girando_normal',
@@ -71,7 +71,7 @@ m12 = ['chevrolet', '2018', 'Onix',
 
 
 with open(arquivoOutput, 'wb') as csvfile:
-    spamwriter = csv.writer(csvfile, delimiter=';', quoting=csv.QUOTE_MINIMAL)
+    spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
     spamwriter.writerow(cabecalho)
     contador = 0
     while (contador <= numero_registros):
