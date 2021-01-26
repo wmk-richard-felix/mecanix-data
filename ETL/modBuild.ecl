@@ -13,7 +13,7 @@ EXPORT modBuild := MODULE
     
     aOutputData := SEQUENTIAL(
       OUTPUT(dDataOut,, sFilename, COMPRESSED, OVERWRITE);
-      OUTPUT(#EXPAND('MDL.mod' + sFile + '.dData()'), NAMED('TABELA_CONSTRUIDA'));
+      OUTPUT(#EXPAND('MDL.mod' + sFile + '.dData()'), NAMED('TABELA_CONSTRUIDA_' + sFile));
     );
     
     RETURN aOutputData;

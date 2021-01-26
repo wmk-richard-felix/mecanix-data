@@ -2,7 +2,7 @@
 import csv
 import random
 
-numero_registros = 1000
+numero_registros = 600
 arquivoOutput = '../arquivo-gerado-liquidos.csv'
 
 m1 = ['chevrolet', '2018', 'Onix',

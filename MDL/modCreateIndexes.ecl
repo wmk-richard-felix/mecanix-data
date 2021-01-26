@@ -20,6 +20,11 @@ EXPORT modCreateIndexes := MODULE
 
   EXPORT aCreateIndexes(BOOLEAN bForceBuild = FALSE) := ORDERED (
     // MDL File indexes MUST be build first
-    aCreateOneIndex('modBarulhos', 'rid', bForceBuild);
+    aCreateOneIndex('modBarulhos',  'rid', bForceBuild);
+    aCreateOneIndex('modFumaca',    'rid', bForceBuild);
+    aCreateOneIndex('modLiquidos',  'rid', bForceBuild);
+    aCreateOneIndex('modLuzes',     'rid', bForceBuild);
+    aCreateOneIndex('modPartida',   'rid', bForceBuild);
+    aCreateOneIndex('modVibracao',  'rid', bForceBuild);
   );
 END;
