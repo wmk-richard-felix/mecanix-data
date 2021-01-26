@@ -2,7 +2,7 @@
 import csv
 import random
 
-numero_registros = 600
+numero_registros = 1000
 arquivoOutput = '../arquivo-gerado-partida.csv'
 
 marca_ano_modelo = ['chevrolet', '2018', 'Onix']

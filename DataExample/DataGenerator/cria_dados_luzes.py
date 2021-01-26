@@ -2,7 +2,7 @@
 import csv
 import random
 
-numero_registros = 600
+numero_registros = 1000
 arquivoOutput = '../arquivo-gerado-luzes.csv'
 cabecalho = ['marca', 'ano', 'modelo',
              'luzes_painel', 'luz_airbag', 'luz_freio_estacionamento', 'luz_bateria', 'luz_motor', 

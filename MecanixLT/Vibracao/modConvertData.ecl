@@ -9,14 +9,14 @@ ML_Core.ToField(dMyTestData, dMyTestDataNF);
 
 EXPORT modConvertData := MODULE
 
-  EXPORT dMyIndTrainDataNF := dMyTrainDataNF(number < 16); // Number is the field number
-  EXPORT dMyDepTrainDataNF := PROJECT(dMyTrainDataNF(number = 16), TRANSFORM(RECORDOF(LEFT), 
+  EXPORT dMyIndTrainDataNF := dMyTrainDataNF(number < 8); // Number is the field number
+  EXPORT dMyDepTrainDataNF := PROJECT(dMyTrainDataNF(number = 8), TRANSFORM(RECORDOF(LEFT), 
       SELF.number := 1;
       SELF := LEFT
   ));
 
-  EXPORT dMyIndTestDataNF := dMyTestDataNF(number < 16);
-  EXPORT dMyDepTestDataNF := PROJECT(dMyTestDataNF(number = 16), TRANSFORM(RECORDOF(LEFT), 
+  EXPORT dMyIndTestDataNF := dMyTestDataNF(number < 8);
+  EXPORT dMyDepTestDataNF := PROJECT(dMyTestDataNF(number = 8), TRANSFORM(RECORDOF(LEFT), 
       SELF.number := 1;
       SELF := LEFT
   ));

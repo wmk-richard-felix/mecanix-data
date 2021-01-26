@@ -2,7 +2,7 @@
 import csv
 import random
 
-numero_registros = 600
+numero_registros = 1000
 arquivoOutput = '../arquivo-gerado-fumaca.csv'
 cabecalho = ['marca', 'ano', 'modelo',
              'saindo_fumaca', 'fumaca_capo', 'fumaca_roda', 'fumaca_ecapamento', 'terreno_motanhoso', 
