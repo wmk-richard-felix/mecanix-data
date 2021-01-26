@@ -3,10 +3,10 @@ IMPORT ML_Core.Discretize;
 IMPORT ML_Core;
 IMPORT LearningTrees AS LT;
 
-dMyDepTrainData := MecanixLT.modConvertData.dMyDepTrainDataNF;
-dMyDepTestData  := MecanixLT.modConvertData.dMyIndTestDataNF;
-dMyIndTrainData := MecanixLT.modConvertData.dMyIndTrainDataNF;
-dMyIndTestData  := MecanixLT.modConvertData.dMyIndTestDataNF;
+dMyDepTrainData := MecanixLT.Barulhos.modConvertData.dMyDepTrainDataNF;
+dMyDepTestData  := MecanixLT.Barulhos.modConvertData.dMyIndTestDataNF;
+dMyIndTrainData := MecanixLT.Barulhos.modConvertData.dMyIndTrainDataNF;
+dMyIndTestData  := MecanixLT.Barulhos.modConvertData.dMyIndTestDataNF;
 dMyDepTrainDataDF := Discretize.ByRounding(dMyDepTrainData);
 dMyDepTestDataDF  := Discretize.ByRounding(dMyDepTestData);
 

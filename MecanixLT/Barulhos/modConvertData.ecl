@@ -1,7 +1,8 @@
 IMPORT MecanixLT, ML_Core;
 
-dMyTrainData := MecanixLT.modPrepareData.dMyTrainData;
-dMyTestData  := MecanixLT.modPrepareData.dMyTestData;
+dMyTrainData := MecanixLT.Barulhos.modPrepareData.dMyTrainData;
+dMyTestData  := MecanixLT.Barulhos.modPrepareData.dMyTestData;
+
 //Numeric Field Matrix conversion
 ML_Core.ToField(dMyTrainData, dMyTrainDataNF);
 ML_Core.ToField(dMyTestData, dMyTestDataNF);

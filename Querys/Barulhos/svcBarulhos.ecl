@@ -3,21 +3,21 @@ EXPORT svcBarulhos := MACRO
 /*--INFO-- Simple Service Example
 <p>Search for a person based on last name</p>
   */
-  UNSIGNED1 barulho_estranho:=0:STORED('barulho_estranho');
-  UNSIGNED1 carro_ligado_parado:=0:STORED('carro_ligado_parado');
-  UNSIGNED1 barulho_durante_partida:=0:STORED('barulho_durante_partida');
-  UNSIGNED1 barulho_girando_volante:=0:STORED('barulho_girando_volante');
-  UNSIGNED1 barulho_engate_marcha:=0:STORED('barulho_engate_marcha');
-  UNSIGNED1 barulho_ligado_movimento:=0:STORED('barulho_ligado_movimento');
-  UNSIGNED1 barulho_pisa_freio:=0:STORED('barulho_pisa_freio');
-  UNSIGNED1 barulho_rodas:=0:STORED('barulho_rodas');
-  UNSIGNED1 barulho_rodas_constantes:=0:STORED('barulho_rodas_constantes');
-  UNSIGNED1 barulho_rodas_intermitente:=0:STORED('barulho_rodas_intermitente');
-  UNSIGNED1 barulho_lombadas:=0:STORED('barulho_lombadas');
-  UNSIGNED1 carro_sem_forca:=0:STORED('carro_sem_forca');
-  UNSIGNED1 barulho_aceleracao:=0:STORED('barulho_aceleracao');
-  UNSIGNED1 motor_girando_lentamente:=0:STORED('motor_girando_lentamente');
-  UNSIGNED1 motor_girando_normal:=0:STORED('motor_girando_normal');
+  UNSIGNED1 barulho_estranho:=0:STORED('barulho_estranho', FORMAT(SEQUENCE(1)));
+  UNSIGNED1 carro_ligado_parado:=0:STORED('carro_ligado_parado', FORMAT(SEQUENCE(2)));
+  UNSIGNED1 barulho_durante_partida:=0:STORED('barulho_durante_partida', FORMAT(SEQUENCE(3)));
+  UNSIGNED1 barulho_girando_volante:=0:STORED('barulho_girando_volante', FORMAT(SEQUENCE(4)));
+  UNSIGNED1 barulho_engate_marcha:=0:STORED('barulho_engate_marcha', FORMAT(SEQUENCE(5)));
+  UNSIGNED1 barulho_ligado_movimento:=0:STORED('barulho_ligado_movimento', FORMAT(SEQUENCE(6)));
+  UNSIGNED1 barulho_pisa_freio:=0:STORED('barulho_pisa_freio', FORMAT(SEQUENCE(7)));
+  UNSIGNED1 barulho_rodas:=0:STORED('barulho_rodas', FORMAT(SEQUENCE(8)));
+  UNSIGNED1 barulho_rodas_constantes:=0:STORED('barulho_rodas_constantes', FORMAT(SEQUENCE(9)));
+  UNSIGNED1 barulho_rodas_intermitente:=0:STORED('barulho_rodas_intermitente', FORMAT(SEQUENCE(10)));
+  UNSIGNED1 barulho_lombadas:=0:STORED('barulho_lombadas', FORMAT(SEQUENCE(11)));
+  UNSIGNED1 carro_sem_forca:=0:STORED('carro_sem_forca', FORMAT(SEQUENCE(12)));
+  UNSIGNED1 barulho_aceleracao:=0:STORED('barulho_aceleracao', FORMAT(SEQUENCE(13)));
+  UNSIGNED1 motor_girando_lentamente:=0:STORED('motor_girando_lentamente', FORMAT(SEQUENCE(14)));
+  UNSIGNED1 motor_girando_normal:=0:STORED('motor_girando_normal', FORMAT(SEQUENCE(15)));
 
   dInputData := DATASET([{
         1,

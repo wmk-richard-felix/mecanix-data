@@ -1,10 +1,10 @@
-IMPORT MDL;
+IMPORT Common, MDL;
 
 EXPORT modPrepareData := MODULE
 
   SHARED lMyFormat := MDL.modBarulhos.lLayoutKey;
-  SHARED dMyData := MDL.modBarulhos.kData_rid;// MDL.modBarulhos.dMIAData();
-
+  EXPORT dMyData := MDL.modBarulhos.kData_rid;
+ 
   // Extended data format
   SHARED lMyFormatExt := RECORD(lMyFormat)
     UNSIGNED4 rnd; // A random number
@@ -21,7 +21,7 @@ EXPORT modPrepareData := MODULE
 
   // Now cut the deck and you have random samples within each set
   // While you're at it, project back to your original format -- we dont need the rnd field anymore
-  EXPORT dMyTrainData := PROJECT(dMyDataES[1..450], lMyFormat);//:PERSIST('~mecanix::barulhos::Train');
-  EXPORT dMyTestData := PROJECT(dMyDataES[451..650], lMyFormat);//:PERSIST('~mecanix::barulhos::Test');
+  EXPORT dMyTrainData := PROJECT(dMyDataES[1..450], lMyFormat);
+  EXPORT dMyTestData := PROJECT(dMyDataES[451..600], lMyFormat);
 
 END;

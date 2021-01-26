@@ -20,4 +20,19 @@ EXPORT modBuild := MODULE
 
   ENDMACRO;
 
+  EXPORT macBuildWithId(sFile = '') := FUNCTIONMACRO
+    IMPORT Common, MDL, STD;
+
+    sFilename := #EXPAND('MDL.mod' + sFile + '.sFilename()');
+    dData := #EXPAND('MDL.mod' + sFile + '.dRawData()');
+    
+    aOutputData := SEQUENTIAL(
+      OUTPUT(dData,, sFilename, COMPRESSED, OVERWRITE);
+      OUTPUT(#EXPAND('MDL.mod' + sFile + '.dData()'), NAMED('TABELA_CONSTRUIDA'));
+    );
+    
+    RETURN aOutputData;
+
+  ENDMACRO;
+
 END;
